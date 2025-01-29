@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -29,4 +30,9 @@ public class Product {
 
     @OneToMany(mappedBy = "id.product")
     private Set<OrderItem> items = new HashSet<>();
+
+
+    public List<Order> getOrders() {
+        return items.stream().map(OrderItem::getOrder).toList();
+    }
 }
