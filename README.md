@@ -5,4 +5,4 @@ Aplicação para simular um e-commerce simples
 Definição da estrututura do banco de dados e relacionamentos da aplicação.
 
 Ferramentas:
-Spring Web | Spring JPA | Spring H2 | Lombok
+Spring Web | Spring JPA | Lombok | H2
