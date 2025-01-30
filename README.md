@@ -5,7 +5,10 @@ Aplicação para simular um e-commerce simples
 Definição da estrututura do banco de dados e relacionamentos da aplicação.
 
 Ferramentas:
-Spring Web | Spring JPA | Lombok | H2
+Spring Web | Spring JPA | H2
 
 ## Branch 02-API-Rest
 Defnição das camadas do projeto, CRUD, exceções e validações
+
+Ferramentas:
+Spring Web | Spring MVC | Spring JPA | H2 | Design Patterns
