@@ -3,14 +3,13 @@ package com.devsuperior.dscommerce.services;
 import com.devsuperior.dscommerce.dtos.ProductDTO;
 import com.devsuperior.dscommerce.entities.Product;
 import com.devsuperior.dscommerce.repositories.ProductRepository;
+import com.devsuperior.dscommerce.repositories.exceptions.ResourceNotFoundException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -20,8 +19,9 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public ProductDTO findById(Long id) {
-        Optional<Product> optionalProduct = repository.findById(id);
-        return new ProductDTO(optionalProduct.get());
+        Product product = repository.findById(id).
+                orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
+        return new ProductDTO(product);
     }
 
     @Transactional(readOnly = true)
@@ -42,7 +42,7 @@ public class ProductService {
     }
 
     @Transactional
-    public ProductDTO update(Long id, ProductDTO productDTO){
+    public ProductDTO update(Long id, ProductDTO productDTO) {
         Product product = repository.getReferenceById(id);
 
 //        Quando busca pelo getReferenceByID (Laze), é necessário utilizar os metodos get da classe
@@ -54,7 +54,7 @@ public class ProductService {
     }
 
     @Transactional
-    public void deleteById(Long id){
+    public void deleteById(Long id) {
         repository.deleteById(id);
     }
 
