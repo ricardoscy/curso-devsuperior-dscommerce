@@ -11,4 +11,4 @@ Spring Web | Spring JPA | H2
 Definição das camadas do projeto, CRUD, exceções e validações
 
 Ferramentas:
-Spring Web | Spring MVC | Spring JPA | Spring Validation | H2 | Design Patterns
+Spring Web | Spring MVC | Spring JPA | Spring Validation | H2 | Maven | Design Patterns
