@@ -8,7 +8,7 @@ Ferramentas:
 Spring Web | Spring JPA | H2
 
 ## Branch 02-API-Rest
-Defnição das camadas do projeto, CRUD, exceções e validações
+Definição das camadas do projeto, CRUD, exceções e validações
 
 Ferramentas:
 Spring Web | Spring MVC | Spring JPA | Spring Validation | H2 | Design Patterns
