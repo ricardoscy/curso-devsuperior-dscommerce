@@ -12,3 +12,7 @@ Definição das camadas do projeto, CRUD, exceções e validações
 
 Ferramentas:
 Spring Web | Spring MVC | Spring JPA | Spring Validation | H2 | Maven | Design Patterns
+
+## Branch 03-JPA-JPQL-SQL
+Aprendizado sobre JPQL e SQL
+Inclusão de busca paginada por nome, utilizando JPQL
